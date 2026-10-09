@@ -8,7 +8,7 @@
 
 ## How to install
 If you have the `.vsix` installation file:
-1. Download or build your own `.vsix` file. You can download it [Here](/run-dotnet-folder-0.0.1.vsix)
+1. Download or build your own `.vsix` file. You can download it [here](https://raw.githubusercontent.com/jvcmtr/vscode_run_dotnetfolder_plugin/refs/heads/main/run-dotnet-folder-0.0.1.vsix)
 2. Open VSCode and go to the **Extensions** view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
 3. Click the **...** (Views and More Actions) menu in the top right corner of the Extensions panel.
 4. Select **Install from VSIX...** and choose the `.vsix` file.
