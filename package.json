@@ -1,8 +1,13 @@
 {
   "name": "run-dotnet-folder",
-  "displayName": "run_dotnet_folder",
-  "description": "Adds context menu for running .csproj",
+  "displayName": "Run dotnet folder",
+  "description": "Adds option context menu for running .csproj",
   "version": "0.0.1",
+  "publisher": "jvcmtr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvcmtr/vscode_run_dotnetfolder_plugin"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
@@ -52,7 +57,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.140.0",
+    "@types/vscode": "^1.100.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
     "typescript-eslint": "^8.61.1",
