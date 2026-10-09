@@ -1,26 +1,48 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import * as path from 'path';
+import * as fs from 'fs';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+    let disposable = vscode.commands.registerCommand('dotnet-runner.runProject', (uri: vscode.Uri) => {
+        
+        // If triggered from the editor context menu or command palette, uri might be undefined.
+        // Fall back to the active text editor's file URI.
+        if (!uri && vscode.window.activeTextEditor) {
+            uri = vscode.window.activeTextEditor.document.uri;
+        }
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "run-dotnet-folder" is now active!');
+        if (!uri) {
+            vscode.window.showErrorMessage('No valid file or folder selected.');
+            return;
+        }
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('run-dotnet-folder.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from run_dotnet_folder!');
-	});
+        const targetPath = uri.fsPath;
+        let dirPath = targetPath;
 
-	context.subscriptions.push(disposable);
+        // If the clicked resource is a file (.csproj or Program.cs), extract its directory path
+        try {
+            const stat = fs.statSync(targetPath);
+            if (stat.isFile()) {
+                dirPath = path.dirname(targetPath);
+            }
+        } catch (error) {
+            vscode.window.showErrorMessage('Failed to read the selected path.');
+            return;
+        }
+
+        // Check if a terminal named "Run .NET" already exists to avoid clutter, or create a new one
+        const terminalName = 'Run .NET';
+        let terminal = vscode.window.terminals.find(t => t.name === terminalName);
+        if (!terminal) {
+            terminal = vscode.window.createTerminal(terminalName);
+        }
+
+        terminal.show();
+        
+        terminal.sendText(`dotnet run --project "${dirPath}"`);
+    });
+
+    context.subscriptions.push(disposable);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}

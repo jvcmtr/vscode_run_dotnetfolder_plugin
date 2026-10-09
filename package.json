@@ -4,20 +4,38 @@
   "description": "Adds context menu for running .csproj",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.140.0"
+    "vscode": "^1.100.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:dotnet-runner.runProject"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "run-dotnet-folder.helloWorld",
-        "title": "Hello World"
+        "command": "dotnet-runner.runProject",
+        "title": "Run .NET Project"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "dotnet-runner.runProject",
+          "when": "explorerResourceIsFolder || resourceExtname == '.csproj' || resourceFilename == 'Program.cs'",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "dotnet-runner.runProject",
+          "when": "resourceExtname == .csproj || resourceFilename == Program.cs",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

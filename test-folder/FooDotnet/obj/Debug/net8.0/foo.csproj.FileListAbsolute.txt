@@ -1,0 +1,14 @@
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/bin/Debug/net8.0/foo
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/bin/Debug/net8.0/foo.deps.json
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/bin/Debug/net8.0/foo.runtimeconfig.json
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/bin/Debug/net8.0/foo.dll
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/bin/Debug/net8.0/foo.pdb
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.GeneratedMSBuildEditorConfig.editorconfig
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.AssemblyInfoInputs.cache
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.AssemblyInfo.cs
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.csproj.CoreCompileInputs.cache
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.dll
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/refint/foo.dll
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.pdb
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/foo.genruntimeconfig.cache
+/home/jvcmtr/Documents/NaoSerio/ProjetosProgram/VSCode_dotnet_plugin/run-dotnet-folder/test-folder/FooDotnet/obj/Debug/net8.0/ref/foo.dll
